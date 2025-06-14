@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Animações personalizadas */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Estilos personalizados para cards */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Estilos para botões */
+.btn-primary {
+  @apply px-6 py-3 bg-green-700 text-white rounded-md hover:bg-green-800 transition duration-300;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-transparent border-2 border-green-700 text-green-700 rounded-md hover:bg-green-700 hover:text-white transition duration-300;
+}
+
+/* Estilos para seções */
+.section-padding {
+  @apply py-20;
+}
+
+.section-title {
+  @apply text-4xl font-bold text-gray-900 mb-4;
+}
+
+.section-subtitle {
+  @apply text-xl text-gray-600 max-w-3xl mx-auto;
+}
+
+/* Estilos para tabelas */
+.table-custom {
+  @apply min-w-full bg-white border border-gray-200;
+}
+
+.table-custom th {
+  @apply py-3 px-4 bg-gray-100 text-left text-gray-700 font-semibold border-b;
+}
+
+.table-custom td {
+  @apply py-3 px-4 border-b;
+}
+
+/* Estilos para formulários */
+.form-input {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent;
+}
+
+.form-label {
+  @apply block text-gray-700 font-medium mb-2;
+}
+
+/* Estilos para badges */
+.badge {
+  @apply px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.badge-green {
+  @apply bg-green-100 text-green-800;
+}
+
+.badge-yellow {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.badge-red {
+  @apply bg-red-100 text-red-800;
+}
+
+/* Estilos para timeline */
+.timeline-item {
+  @apply border-l-4 border-green-700 pl-4 py-2;
+}
+
+/* Estilos para galeria */
+.gallery-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.gallery-item {
+  @apply relative overflow-hidden rounded-lg shadow-md;
+}
+
+/* Estilos para tema escuro */
+.dark {
+  @apply bg-gray-900 text-white;
+}
+
+.dark .card {
+  @apply bg-gray-800 text-white;
+}
+
+.dark .btn-secondary {
+  @apply border-white text-white hover:bg-white hover:text-gray-900;
+}
+
+/* Estilos para responsividade */
+@media (max-width: 768px) {
+  .section-title {
+    @apply text-3xl;
+  }
+  
+  .section-padding {
+    @apply py-12;
+  }
+}
